@@ -99,6 +99,6 @@ src/
 ---
 
 ## Credits
-
+https://roadmap.sh/projects/pomodoro-timer
 Developed with React, Tailwind CSS, and Lucide React.  
 © {Current Year} FocusFlow.
