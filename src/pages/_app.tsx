@@ -5,7 +5,6 @@ import type { AppProps } from "next/app";
 import React from 'react';
 import PomodoroTimer from '@/components/pomodoro-timer';
 import TodoList from '@/components/todo-list';
-//import AiTaskSuggester from '@/components/ai-task-suggester';
 import useLocalStorage from '@/hooks/use-local-storage';
 import type { Task } from '@/types';
 import { Timer } from 'lucide-react'; // Changed from TimerIcon to Timer as per lucide-react
