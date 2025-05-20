@@ -1,7 +1,5 @@
 "use client";
 
-import type { AppProps } from "next/app";
-
 import React from 'react';
 import PomodoroTimer from '@/components/pomodoro-timer';
 import TodoList from '@/components/todo-list';
@@ -14,14 +12,6 @@ export default function App() {
 
   const [tasks, setTasks] = useLocalStorage<Task[]>('todoTasks', []);
 
-  const handleAddTaskFromSuggestion = (taskText: string) => {
-    const newTask: Task = {
-      id: Date.now().toString(),
-      text: taskText,
-      completed: false,
-    };
-    setTasks(prevTasks => [...prevTasks, newTask]);
-  };
 
   return (<div className="container mx-auto px-4 py-8 flex flex-col items-center min-h-screen">
       <header className="mb-10 text-center">
