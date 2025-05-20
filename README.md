@@ -1,40 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# FocusFlow Pomodoro Project Documentation
 
-## Getting Started
+## Description
 
-First, run the development server:
+**FocusFlow** is a productivity web application that combines a Pomodoro timer with a To-Do List. It allows users to efficiently manage their time and tasks, helping to improve focus and personal organization.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Technologies Used
+
+### Languages
+
+- **TypeScript**  
+  Used for component and application logic development, providing static typing and greater robustness.
+
+- **CSS**  
+  Used for global style customization and color variables.
+
+### Frameworks and Libraries
+
+- **React**  
+  Main framework for building the user interface with reusable components.
+
+- **Next.js**  
+  Framework for React applications with support for SSR, automatic routing, and optimization.
+
+- **Tailwind CSS**  
+  Utility-first CSS framework, allowing you to apply classes directly to components for fast and responsive design.
+
+- **Lucide React**  
+  SVG icon library for React, used to display icons such as the timer.
+
+---
+
+## Folder Structure
+
+```
+src/
+  components/
+    pomodoro-timer.tsx
+    todo-list.tsx
+  hooks/
+    use-local-storage.ts
+  pages/
+    _app.tsx
+  styles/
+    globals.css
+  types/
+    index.ts (or Task.ts)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Main Components
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **PomodoroTimer**  
+  Component that manages the Pomodoro timer.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- **TodoList**  
+  Component for task management, with localStorage persistence.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Installation and Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. **Install dependencies:**
+   ```
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+2. **Install Tailwind CSS and its dependencies:**
+   ```
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Import global styles in `_app.tsx`:**
+   ```tsx
+   import "@/styles/globals.css";
+   ```
 
-## Deploy on Vercel
+4. **Run the application:**
+   ```
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Notes
+
+- The project uses Tailwind CSS classes for most styles.
+- Colors and themes are defined using CSS variables in `globals.css`.
+- Task storage uses a custom hook (`useLocalStorage`) for browser persistence.
+- **If you are using Next.js, make sure to check your `next.config.js` or `next.config.ts` file. If you have the line `output: "export"`, comment it out or remove it if you are not exporting a static site:**
+  ```js
+  // output: "export",
+  ```
+
+---
+
+## Credits
+
+Developed with React, Tailwind CSS, and Lucide React.  
+© {Current Year} FocusFlow.
